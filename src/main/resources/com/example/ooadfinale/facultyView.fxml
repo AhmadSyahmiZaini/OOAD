@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" style="-fx-background-color: #191970;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ooadfinale.FacultyViewController">
+   <HBox alignment="CENTER" layoutX="50.0" layoutY="650.0" prefHeight="58.0" prefWidth="900.0" style="-fx-background-color: TRANSPARENT;">
+      <children>
+         <Button fx:id="entryButton" mnemonicParsing="false" onAction="#switchTable" prefHeight="26.0" prefWidth="120.0" text="Entry Requirements">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="feeButton" mnemonicParsing="false" onAction="#switchTable" prefHeight="26.0" prefWidth="120.0" text="Fee Structure">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="courseButton" mnemonicParsing="false" onAction="#switchTable" prefHeight="26.0" prefWidth="120.0" text="Course Structure">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="durationButton" mnemonicParsing="false" onAction="#switchTable" prefHeight="26.0" prefWidth="120.0" text="Duration">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Button>
+         <Button fx:id="scholarshipButton" mnemonicParsing="false" onAction="#viewScholarship" prefHeight="26.0" prefWidth="120.0" text="Scholarship">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Button>
+         <StackPane prefHeight="150.0" prefWidth="200.0">
+            <children>
+               <GridPane fx:id="guestPane" disable="true" visible="false">
+                 <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                  <children>
+                     <Button mnemonicParsing="false" onAction="#switchToRegisterView" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #dee2fa;" text="Register" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                     <Button mnemonicParsing="false" onAction="#switchToLoginView" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #dee2fa;" text="Log In" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                     <Button mnemonicParsing="false" onAction="#switchToMainPageView" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #dee2fa;" text="Main Page" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                  </children>
+               </GridPane>
+               <GridPane fx:id="loginPane">
+                  <columnConstraints>
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                     <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                     <Button mnemonicParsing="false" onAction="#switchToMainPageView" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #dee2fa;" text="Log Out" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                     <Button mnemonicParsing="false" onAction="#switchToProfileView" prefHeight="26.0" prefWidth="80.0" style="-fx-background-color: #dee2fa;" text="Profile" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  </children>
+               </GridPane>
+            </children>
+         </StackPane>
+      </children>
+   </HBox>
+   <StackPane layoutX="50.0" layoutY="125.0">
+      <children>
+         <TableView fx:id="ERTable" disable="true" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #fcfcfc;" visible="false">
+            <columns>
+               <TableColumn fx:id="eeeColumn" minWidth="-Infinity" prefWidth="300.0" style="-fx-background-color: #adbdff;" text="Electrical &amp; Electronics &#10;&#9;Engineering" />
+               <TableColumn fx:id="cseColumn" prefWidth="75.0" style="-fx-background-color: #dee2fa;" text="Computer Science Engineering" />
+               <TableColumn fx:id="eceColumn" prefWidth="75.0" style="-fx-background-color: #adbdff;" text="Electronics &amp; Communication &#10;&#9;       Engineering" />
+               <TableColumn fx:id="ceColumn" prefWidth="75.0" style="-fx-background-color: #dee2fa;" text="Civil Engineering" />
+               <TableColumn fx:id="meColumn" prefWidth="136.7999267578125" style="-fx-background-color: #adbdff;" text="Mechanical Engineering" />
+            </columns>
+            <columnResizePolicy>
+               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+         </TableView>
+         <TableView fx:id="STable" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #fcfcfc;">
+            <columns>
+               <TableColumn fx:id="scholarshipColumn" prefWidth="75.0" style="-fx-background-color: #dee2fa;" text="Scholarship" />
+            </columns>
+            <columnResizePolicy>
+               <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+         </TableView>
+      </children>
+   </StackPane>
+   <HBox alignment="CENTER" layoutX="199.0" layoutY="29.0" prefHeight="78.0" prefWidth="601.0">
+      <children>
+         <Button mnemonicParsing="false" onAction="#visibleEEE" prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: #dee2fa;" text="EEE">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#visibleCSE" prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: #dee2fa;" text="CSE">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#visibleECE" prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: #dee2fa;" text="ECE">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#visibleCE" prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: #dee2fa;" text="CE">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#visibleME" prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: #dee2fa;" text="ME">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#switchToFacultyMasterView" prefHeight="26.0" prefWidth="119.0" style="-fx-background-color: #dee2fa;" text="Switch to Master">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Button>
+         <Button mnemonicParsing="false" onAction="#switchToMediaView" style="-fx-background-color: #dee2fa;" text="Video Media">
+            <HBox.margin>
+               <Insets left="5.0" right="5.0" />
+            </HBox.margin>
+         </Button>
+      </children>
+   </HBox>
+</AnchorPane>

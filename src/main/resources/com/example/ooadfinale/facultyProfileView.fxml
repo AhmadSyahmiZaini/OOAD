@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight=" -Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" style="-fx-background-color: #191970;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ooadfinale.FacultyProfileViewController">
+   <children>
+      <AnchorPane prefHeight="750.0" prefWidth="250.0" style="-fx-background-color: #202A44;;">
+         <children>
+            <Label layoutX="79.0" layoutY="121.0" text="Welcome" textFill="WHITE">
+               <font>
+                  <Font name="Consolas" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernameLabel" alignment="CENTER" layoutX="9.0" layoutY="182.0" prefHeight="110.0" prefWidth="232.0" text="User" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="40.0" layoutY="252.0" prefHeight="246.0" prefWidth="170.0">
+               <children>
+                  <Button fx:id="entryButton" mnemonicParsing="false" onAction="#switchView" prefWidth="150.0" text="Entry Requirement">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="courseButton" mnemonicParsing="false" onAction="#switchView" prefWidth="150.0" text="Course Structure">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="feeButton" mnemonicParsing="false" onAction="#switchView" prefWidth="150.0" text="Fee Structure">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="durationButton" mnemonicParsing="false" onAction="#switchView" prefWidth="150.0" text="Duration">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="scholarshipButton" mnemonicParsing="false" onAction="#switchView" prefWidth="150.0" text="Scholarship">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="40.0" layoutY="570.0" prefHeight="130.0" prefWidth="170.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#switchToMainPageView" prefWidth="150.0" style="-fx-background-color: #dee2fa;" text="Log Out">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+      <AnchorPane layoutX="250.0" prefHeight="750.0" prefWidth="750.0">
+         <children>
+            <StackPane layoutX="25.0" layoutY="25.0" prefHeight="700.0" prefWidth="700.0">
+               <children>
+                  <VBox fx:id="entryBox" alignment="CENTER" disable="true" visible="false">
+                     <children>
+                        <Label text="Entry Requirement" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Consolas" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="entryText" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="500.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Button mnemonicParsing="false" onAction="#updateEntryReq" text="Save">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="courseBox" alignment="CENTER" disable="true" layoutX="10.0" layoutY="10.0" visible="false">
+                     <children>
+                        <Label text="Course Structure" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Consolas" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="courseText" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="500.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Button mnemonicParsing="false" onAction="#updateCourse" text="Save">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="feeBox" alignment="CENTER" disable="true" layoutX="10.0" layoutY="10.0" visible="false">
+                     <children>
+                        <Label text="Fee Structure" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Consolas" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="feeText" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="500.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Button mnemonicParsing="false" onAction="#updateFee" text="Save">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="durationBox" alignment="CENTER" disable="true" layoutX="10.0" layoutY="10.0" visible="false">
+                     <children>
+                        <Label text="Duration" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Consolas" size="24.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="durationText" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="500.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Button mnemonicParsing="false" onAction="#updateDuration" text="Save">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="scholarshipBox" alignment="CENTER" layoutX="10.0" layoutY="10.0">
+                     <children>
+                        <Label text="Scholarship - Degree" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Consolas" size="24.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="51.0" prefWidth="700.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <Button fx:id="presidentButton" mnemonicParsing="false" onAction="#switchScholarshipView" prefWidth="150.0" text="President">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="meritButton" layoutX="285.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchScholarshipView" prefWidth="150.0" text="Merit">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="talentButton" layoutX="360.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchScholarshipView" prefWidth="150.0" text="Talent">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="internationalButton" layoutX="435.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchScholarshipView" prefWidth="150.0" text="International">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label layoutX="228.0" layoutY="18.0" text="Scholarship - Master" textFill="WHITE">
+                           <font>
+                              <Font name="Consolas" size="24.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="52.0" prefHeight="51.0" prefWidth="700.0">
+                           <children>
+                              <Button fx:id="presidentMasterButton" mnemonicParsing="false" onAction="#switchScholarshipView" prefWidth="150.0" text="President">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="postButton" layoutX="435.0" layoutY="23.0" mnemonicParsing="false" onAction="#switchScholarshipView" prefWidth="150.0" text="Post">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <TextArea fx:id="scholarshipText" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="550.0" prefWidth="500.0">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Button mnemonicParsing="false" onAction="#updateScholarship" text="Save">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <StackPane.margin>
+                        <Insets />
+                     </StackPane.margin>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
